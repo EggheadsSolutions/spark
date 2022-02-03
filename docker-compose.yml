@@ -1,0 +1,10 @@
+version: "3"
+services:
+  node14:
+    # Создаем контейнер с "node_14"
+    build: .
+    image: node14
+
+    # Монтируем директорию с проектом
+    volumes:
+      - .:/var/www
