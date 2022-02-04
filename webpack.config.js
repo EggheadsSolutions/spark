@@ -43,13 +43,15 @@ module.exports = {
     ]
   },
   plugins: [
-    // Remove empty js files from /dist
+    // Удалить пустые файлы js из /dist
     new FixStyleOnlyEntriesPlugin(),
-    // Extract css files to seperate bundle
+
+    // Извлечь файлы css в отдельный пакет
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
       chunkFilename: "css/[id].css"
     }),
+
     // jQuery and PopperJS
     new Webpack.ProvidePlugin({
       $: "jquery",
@@ -59,20 +61,24 @@ module.exports = {
       "window.$": "jquery",
       Popper: ["popper.js", "default"]
     }),
-    // Copy fonts and images to dist
+
+    // Копируем шрифты и изображения в dist
     new CopyWebpackPlugin([
       { from: "src/fonts", to: "fonts" },
       { from: "src/img", to: "img" }
     ]),
-    // Speed up webpack build
+
+    // Ускоряем сборку вебпака
     new HardSourceWebpackPlugin(),
-    // Copy dist folder to docs/dist
+
+    // Копируем папку dist в docs/dist
     new FileManagerPlugin({
       onEnd: {
         copy: [{ source: "./dist/**/*", destination: "./docs" }]
       }
     }),
-    // Ignore momentjs locales
+
+    // Игнорировать локали momentjs
     new Webpack.IgnorePlugin({
       resourceRegExp: /^\.\/locale$/,
       contextRegExp: /moment$/
@@ -80,13 +86,13 @@ module.exports = {
   ],
   module: {
     rules: [
-      // Babel-loader
+      // Babel-загрузчик
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
         loader: ["babel-loader?cacheDirectory=true"]
       },
-      // Css-loader & sass-loader
+      // Css-загрузчик и sass-загрузчик
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
@@ -96,7 +102,7 @@ module.exports = {
           "sass-loader"
         ]
       },
-      // Load fonts
+      // Загружаем шрифты
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
@@ -110,7 +116,7 @@ module.exports = {
           }
         ]
       },
-      // Load images
+      // Загружаем изображения
       {
         test: /\.(png|jpg|jpeg|gif)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
@@ -124,7 +130,7 @@ module.exports = {
           }
         ]
       },
-      // Expose loader
+      // Выставляем загрузчик
       {
         test: require.resolve("jquery"),
         use: [
