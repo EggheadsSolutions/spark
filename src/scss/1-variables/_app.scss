@@ -1,12 +1,15 @@
 // Fonts
-$font-family-sans-serif: "Hind Vadodara", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
-$headings-font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif: "SF Pro Display", -apple-system, BlinkMacSystemFont, Arial, sans-serif !default;
+$headings-font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, Arial, sans-serif !default;
+
 $font-weight-light: 300 !default;
-$font-weight-normal: 400 !default;
-$font-weight-bold: 500 !default;
+$font-weight-normal: 500 !default;
+$font-weight-bold: 700 !default;
+
 $font-size-base: .9375rem !default;
-$font-size-lg: 1.125rem !default;
+$font-size-lg: 1rem !default;
 $font-size-sm: .75rem !default;
+
 $headings-font-weight: 500 !default;
 $lead-font-weight: 400 !default;
 
@@ -60,9 +63,10 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black: #000 !default;
 
-$blue:    #3B7DDD !default;
+$black:   #1C2428 !default;
+$gray:    #868E96 !default;
+$blue:    #1F73ED !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -72,6 +76,18 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+
+// Color Background | Border
+// # gray
+$gray-background: #FFFFFF !default;
+$gray-background-disabled: #F6F8FA !default;
+$gray-border: #DFDFDF !default;
+$gray-border-disabled: #DFDFDF !default;
+// # blue
+$blue-background: #F4F7FC !default;
+$blue-background-disabled: #F6F8FA !default;
+$blue-border: #007BFF !default;
+$blue-border-disabled: #DFDFDF !default;
 
 $primary:       $blue !default;
 $secondary:     $purple !default;
@@ -122,13 +138,13 @@ $line-height-base: 1.5 !default;
 $line-height-lg: 1.5 !default;
 $line-height-sm: 1.5 !default;
 
-// Headings
-$h1-font-size: $font-size-base * 2 !default;
-$h2-font-size: $font-size-base * 1.75 !default;
-$h3-font-size: $font-size-base * 1.5 !default;
-$h4-font-size: $font-size-base * 1.25 !default;
-$h5-font-size: $font-size-base !default;
-$h6-font-size: $font-size-base !default;
+// Headings Figma
+$h1-font-size: 28px !default;
+$h2-font-size: 24px !default;
+$h3-font-size: 20px !default;
+$h4-font-size: 16px !default;
+$h5-font-size: 15px !default;
+$h6-font-size: 14px !default;
 $headings-color: #203A45 !default;
 
 // Displays
@@ -226,8 +242,8 @@ $modal-header-border-width: 1px !default;
 $modal-footer-border-width: 1px !default;
 $modal-xl: 1140px !default;
 $modal-lg: 900px !default;
-$modal-md: 600px !default;
-$modal-sm: 400px !default;
+$modal-md: 500px !default;
+$modal-sm: 460px !default;
 $modal-transition: transform .25s ease-out !default;
 
 // Tabs
