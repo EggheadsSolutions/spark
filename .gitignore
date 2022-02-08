@@ -9,6 +9,10 @@
 /docs/js
 /docs/fonts
 /docs/img
+/docs/css/
+/docs/js/
+/docs/fonts/
+/docs/img/
 
 # production
 /dist
