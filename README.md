@@ -35,27 +35,3 @@ npm run start
 ```
 npm run build
 ```
-
-## Ошибка при сборке
-
-**Чистим cache**
-```
-npm cache clean --force
-```
-**Смотрим в логах и ищем модуль, который отвалился и обновляем его:**
-```
-npm ERR! code 1
-npm ERR! path C:\Eggheads\eggheads-spark\node_modules\node-sass
-npm ERR! command failed
-```
-**Меняем package.json:**
-```
-"node-sass": "4.14.1",
-на
-"node-sass": "^7.0.1",
-```
-
-**Заново устанавливаем:**
-```
-npm install
-```
