@@ -3,7 +3,7 @@ $font-family-sans-serif: "SF Pro Display", -apple-system, BlinkMacSystemFont, Ar
 $headings-font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, Arial, sans-serif !default;
 
 $font-weight-light: 300 !default;
-$font-weight-normal: 500 !default;
+$font-weight-normal: 400 !default;
 $font-weight-bold: 700 !default;
 
 $font-size-base: .9375rem !default;
@@ -128,7 +128,8 @@ $social-colors: (
 
 // Body
 $body-bg: #f4f7fc !default;
-$body-color: #000000 !default;
+$body-color: #1C2428 !default;
+$body-append-color: #737E8F !default;
 
 // Common
 $border-width: 1px !default;

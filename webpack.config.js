@@ -17,9 +17,9 @@ module.exports = {
   entry: {
     app: "./src/js/app",
     settings: "./src/js/settings",
-    modern: "./src/scss/modern.scss",
-    classic: "./src/scss/classic.scss",
-    dark: "./src/scss/dark.scss",
+    // modern: "./src/scss/modern.scss",
+    // classic: "./src/scss/classic.scss",
+    // dark: "./src/scss/dark.scss",
     light: "./src/scss/light.scss"
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
@@ -71,7 +71,7 @@ module.exports = {
     // Ускоряем сборку вебпака
     new HardSourceWebpackPlugin(),
 
-    // Копируем папку dist в docs/dist
+    // Копируем содержимое папки ./dist в ./docs
     new FileManagerPlugin({
       onEnd: {
         copy: [{ source: "./dist/**/*", destination: "./docs" }]
